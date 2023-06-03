@@ -1,15 +1,3 @@
-```
-function submitMessage() {
-  var inputBox = document.getElementById("message");
-  var message = inputBox.value;
-
-  if (message.trim() !== "") {
-    createChatItem("user", message, "right");
-    sendMessage(message);
-    inputBox.value = "";
-  }
-}
-```
 function submitMessage() {
   var inputBox = document.getElementById("message");
   var message = inputBox.value;
