@@ -123,7 +123,7 @@ grid-gap: 10px;
   top: 25%;
   left: 100%;
   white-space: nowrap;
-  animation: marquee 3s linear infinite;
+  animation: marquee 2s linear infinite;
 }
 
 #footer {
