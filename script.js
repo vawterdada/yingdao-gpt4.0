@@ -35,7 +35,7 @@ function sendMessage(message) {
 
   var placeholderContent = document.createElement("div");
   placeholderContent.className = "content";
-  placeholderContent.textContent = "正在接收回复内容            ";
+  placeholderContent.textContent = "正在接收回复内容                    ";
   placeholderContent.classList.add("marquee"); // 添加跑马灯动画的类名
   placeholderItem.appendChild(placeholderContent);
 
