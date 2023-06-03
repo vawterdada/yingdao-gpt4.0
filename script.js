@@ -100,7 +100,6 @@ window.onload = function() {
   var chats = localStorage.getItem("chats");
   if(chats) {
     document.querySelector(".chats").innerHTML = chats;
-    var chats = document.getElementsByClassName("chats")[0];
-    chats.scrollTop = chats.scrollHeight;
+    document.getElementsByClassName("chats")[0].scrollTop = chats.scrollHeight;
   }
 }
