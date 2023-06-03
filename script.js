@@ -50,6 +50,8 @@ function sendMessage(message) {
       // 移除占位回复消息
       chats.removeChild(placeholderItem);
       createChatItem("bot", response, "left");
+      // 保存聊天记录到本地存储
+      localStorage.setItem("chats", chats.innerHTML);
     }
   };
   xhr.send();
@@ -82,6 +84,8 @@ function createChatItem(sender, message, alignment) {
 
   chats.appendChild(chatItem);
   chats.scrollTop = chats.scrollHeight;
+  // 保存聊天记录到本地存储
+  localStorage.setItem("chats", chats.innerHTML);
 }
 
 
@@ -91,3 +95,10 @@ document.getElementById("message").addEventListener("keydown", function (event) 
     submitMessage();
   }
 });
+
+window.onload = function() {
+  var chats = localStorage.getItem("chats");
+  if(chats) {
+    document.querySelector(".chats").innerHTML = chats;
+  }
+}
