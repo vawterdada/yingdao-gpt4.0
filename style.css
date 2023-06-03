@@ -121,7 +121,7 @@ grid-gap: 10px;
   content: "。。。。。。";
   position: absolute;
   top: 25%;
-  left: 120%;
+  left: 100%;
   white-space: nowrap;
   animation: marquee 3s linear infinite;
 }
