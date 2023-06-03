@@ -1,3 +1,4 @@
+```
 function submitMessage() {
   var inputBox = document.getElementById("message");
   var message = inputBox.value;
@@ -8,6 +9,25 @@ function submitMessage() {
     inputBox.value = "";
   }
 }
+```
+function submitMessage() {
+  var inputBox = document.getElementById("message");
+  var message = inputBox.value;
+  if (message.trim().toLowerCase() === "清除历史消息") { // 判断用户输入是否为“清除历史消息”
+    localStorage.removeItem("chats"); // 清除本地存储的历史数据
+    document.querySelector(".chats").innerHTML = ""; // 清空聊天窗口中的内容
+    inputBox.value = "";
+  } else {
+    if (message.trim() !== "") {
+      createChatItem("user", message, "right");
+      sendMessage(message);
+      inputBox.value = "";
+    }
+  }
+  
+}
+
+
 
 // function sendMessage(message) {
 //   var xhr = new XMLHttpRequest();
